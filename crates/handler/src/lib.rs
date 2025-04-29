@@ -1,17 +1,11 @@
-//! Execution handler for Optimism's EVM implementation.
+//! Optimism-specific constants, types, and helpers for EVM execution.
 //!
-//! This crate implements the execution logic for Optimism's modified EVM:
-//!
-//! - Transaction execution and state transition handlers
-//! - EVM opcode implementations and gas accounting
-//! - Pre-execution validation (signatures, nonce, gas, etc.)
-//! - Post-execution processing (gas refunds, fee distribution, etc.)
-//! - Precompiled contract interfaces and implementations
-//! - System calls for L1 <> L2 communication
-//!
-//! The handler module orchestrates the complete execution flow from transaction
-//! receipt to finalized state changes, implementing Optimism's unique gas accounting
-//! and deposit transaction behavior.
+//! Modifies standard execution with:
+//! - L1 data fee calculation and attribution
+//! - Deposit transaction special handling per hardfork 
+//! - Fee distribution to multiple recipients
+//! - System transactions for cross-domain messaging
+//! - Sequencer fee processing
 #![cfg_attr(not(test), warn(unused_crate_dependencies))]
 #![cfg_attr(not(feature = "std"), no_std)]
 
