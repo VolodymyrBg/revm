@@ -1,15 +1,10 @@
-//! State management system for Optimism's execution environment.
+//! Optimism-specific constants, types, and helpers for state management.
 //!
-//! This crate provides the core state abstractions for Optimism's EVM implementation:
-//!
-//! - Account: Represents an Ethereum account with balance, nonce, code, and storage
-//! - Account status: Tracks account lifecycle (created, touched, self-destructed, etc.)
-//! - Storage: Manages EVM storage slots with original/present values for gas calculations
-//! - Transient storage: Implements EIP-1153 for non-persistent storage
-//!
-//! The state module is fundamental to the correct execution of smart contracts
-//! and transaction processing, ensuring that Optimism's state transitions match
-//! the expected behavior while enabling rollup-specific customizations.
+//! State structures optimized for:
+//! - Deposit transaction processing with mint value tracking  
+//! - L1/L2 fee recipient account management
+//! - Access list accounting aligned with EIP-2930
+//! - Predeploy contract state handling
 #![cfg_attr(not(test), warn(unused_crate_dependencies))]
 #![cfg_attr(not(feature = "std"), no_std)]
 
