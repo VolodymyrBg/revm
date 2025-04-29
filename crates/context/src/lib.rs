@@ -1,16 +1,10 @@
-//! Optimism context implementation for REVM.
+//! Optimism-specific constants, types, and helpers for execution context.
 //!
-//! This crate provides Optimism-specific context for EVM execution, containing essential
-//! execution environment variables that influence transaction processing:
-//!
-//! - Block environment (timestamp, blockhash, etc.)
-//! - Configuration environment (chain ID, specifications, etc.)
-//! - Transaction environment (gas limit, calldata, addresses, etc.)
-//! - EVM context for internal state tracking during execution
-//! - Journal for tracking state changes with rollback capabilities
-//!
-//! The context module helps Optimism's execution layer handle its unique state transition
-//! requirements while remaining compatible with Ethereum's execution semantics.
+//! Key differences from Ethereum:
+//! - Block context includes L1 origin data for fee calculations
+//! - Transaction context supports deposit transactions
+//! - Journal tracks additional state for L1/L2 fee distribution
+//! - Configuration supports Optimism-specific hardforks
 #![cfg_attr(not(test), warn(unused_crate_dependencies))]
 #![cfg_attr(not(feature = "std"), no_std)]
 
