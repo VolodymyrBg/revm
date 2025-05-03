@@ -1,37 +1,37 @@
 //! Optimism-specific hardfork specifications.
-//! 
+//!
 //! This module defines the hardfork versions (specifications) for Optimism:
-//! 
+//!
 //! - **Bedrock** (March 2023): Initial version of the new modular architecture for OP Stack.
 //!   Mapped to Ethereum's Merge (Paris) specification.
-//! 
+//!
 //! - **Regolith** (June 2023): Improved gas accounting for deposit transactions and removed
 //!   special handling for "system transactions." Mapped to Ethereum's Merge specification.
-//! 
+//!
 //! - **Canyon** (January 2024): Added support for Shanghai EIPs including EIP-4895 (withdrawals).
 //!   Mapped to Ethereum's Shanghai specification.
-//! 
+//!
 //! - **Ecotone** (May 2024): Introduced Ethereum Cancun features including EIP-4844 (blobs).
 //!   Mapped to Ethereum's Cancun specification.
-//! 
+//!
 //! - **Fjord** (Planned): Extended Cancun with additional features like P256 signature verification.
 //!   Mapped to Ethereum's Cancun specification.
-//! 
+//!
 //! - **Granite** (Planned): Further extension of Cancun features.
 //!   Mapped to Ethereum's Cancun specification.
-//! 
+//!
 //! - **Holocene** (Planned): Final Cancun-based hardfork.
 //!   Mapped to Ethereum's Cancun specification.
-//! 
+//!
 //! - **Isthmus** (Planned): First Prague-based hardfork for Optimism.
 //!   Mapped to Ethereum's Prague specification.
-//! 
+//!
 //! - **Interop** (Test): Used for testing Prague-based hardforks.
 //!   Mapped to Ethereum's Prague specification.
-//! 
+//!
 //! - **Osaka** (Planned): Update with EVM Object Format (EOF) support.
 //!   Mapped to Ethereum's Osaka specification.
-//! 
+//!
 //! Each Optimism hardfork maps to an Ethereum specification and may include
 //! Optimism-specific features and modifications.
 
